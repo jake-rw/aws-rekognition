@@ -1,0 +1,54 @@
+{
+    "name": "jake-rw/aws-rekognition",
+    "description": "Laravel Package Integrating to AWS Rekognition",
+    "keywords": [
+        "jake-rw",
+        "aws-rekognition"
+    ],
+    "homepage": "https://github.com/jake-rw/aws-rekognition",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Jake Rudkin-Wilson",
+            "email": "me@jakerw.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JakeRw\\AwsRekognition\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JakeRw\\AwsRekognition\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JakeRw\\AwsRekognition\\AwsRekognitionServiceProvider"
+            ],
+            "aliases": {
+                "AwsRekognition": "JakeRw\\AwsRekognition\\AwsRekognitionFacade"
+            }
+        }
+    }
+}
